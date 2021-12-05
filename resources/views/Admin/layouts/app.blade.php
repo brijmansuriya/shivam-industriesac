@@ -58,6 +58,12 @@
                             <span class="sidebar-title">Dashboard</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ URL('admin/category') }}">
+                            <span class="glyphicon glyphicon-home"></span>
+                            <span class="sidebar-title">Category</span>
+                        </a>
+                    </li>
 
                 </ul>
             </div>

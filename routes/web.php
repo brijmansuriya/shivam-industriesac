@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,9 +20,21 @@ Route::get('/', function () {
 });
 Auth::routes();
 
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/',[DashboardController::class,'index']);
 });
-// Auth::routes();
+Route::group(['prefix' => 'admin/category'], function() {
+    Route::get('/', [categoryController::class, 'index']);
+    Route::get('/add', [categoryController::class, 'add']);
+    Route::get('/add/{id}', [categoryController::class, 'add']);
+    Route::post('/save', [categoryController::class, 'save']);
+    Route::get('/delete/{id}', [categoryController::class, 'delete']);
+});
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/clr', function () {
+    $exitCode = Artisan::call('cache:clear');
+    $exitCode = Artisan::call('config:clear');
+    $exitCode = Artisan::call('config:cache');
+    $exitCode = Artisan::call('view:clear');
+});
