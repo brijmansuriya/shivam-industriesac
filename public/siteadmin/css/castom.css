@@ -1,0 +1,9 @@
+@media (max-width: 700px) {
+    #topbar .breadcrumb .crumb-active {
+        display: inline-block;
+    }
+}
+
+#ranges {
+    display: none;
+}
