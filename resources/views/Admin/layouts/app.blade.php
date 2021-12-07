@@ -60,8 +60,20 @@
                     </li>
                     <li>
                         <a href="{{ URL('admin/category') }}">
-                            <span class="glyphicon glyphicon-home"></span>
+                            <span class="fa fa-crosshairs"></span>
                             <span class="sidebar-title">Category</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ URL('admin/vehicle') }}">
+                            <span class="fa fa-truck"></span>
+                            <span class="sidebar-title">Vehicle</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ URL('admin/bearing') }}">
+                            <span class="fa fa-cog"></span>
+                            <span class="sidebar-title">Bearing</span>
                         </a>
                     </li>
 

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\VehicleController;
+use App\Http\Controllers\Admin\BearingController;
 use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,20 @@ Route::group(['prefix' => 'admin/category'], function() {
     Route::get('/add/{id}', [categoryController::class, 'add']);
     Route::post('/save', [categoryController::class, 'save']);
     Route::get('/delete/{id}', [categoryController::class, 'delete']);
+});
+Route::group(['prefix' => 'admin/vehicle'], function() {
+    Route::get('/', [VehicleController::class, 'index']);
+    Route::get('/add', [VehicleController::class, 'add']);
+    Route::get('/add/{id}', [VehicleController::class, 'add']);
+    Route::post('/save', [VehicleController::class, 'save']);
+    Route::get('/delete/{id}', [VehicleController::class, 'delete']);
+});
+Route::group(['prefix' => 'admin/bearing'], function() {
+    Route::get('/', [BearingController::class, 'index']);
+    Route::get('/add', [BearingController::class, 'add']);
+    Route::get('/add/{id}', [BearingController::class, 'add']);
+    Route::post('/save', [BearingController::class, 'save']);
+    Route::get('/delete/{id}', [BearingController::class, 'delete']);
 });
 
 Route::get('/clr', function () {
