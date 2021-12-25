@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\VehicleController;
 use App\Http\Controllers\Admin\BearingController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FrontController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,6 +48,9 @@ Route::group(['prefix' => 'admin/bearing'], function() {
     Route::post('/save', [BearingController::class, 'save']);
     Route::get('/delete/{id}', [BearingController::class, 'delete']);
 });
+Route::get('/aboutus', [FrontController::class, 'aboutus']);
+Route::get('/contactus', [FrontController::class, 'contactus']);
+Route::get('/service', [FrontController::class, 'service']);
 
 Route::get('/clr', function () {
     $exitCode = Artisan::call('cache:clear');

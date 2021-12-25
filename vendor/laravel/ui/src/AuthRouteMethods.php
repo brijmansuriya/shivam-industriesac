@@ -14,24 +14,24 @@ class AuthRouteMethods
     {
         return function ($options = []) {
             
-            $namespace = class_exists($this->prependGroupNamespace('Admin\Auth\LoginController')) ? null : 'App\Http\Controllers';
+            $namespace = class_exists($this->prependGroupNamespace('Auth\LoginController')) ? null : 'App\Http\Controllers';
           
             $this->group(['namespace' => $namespace], function() use($options) {
                 // Login Routes...
                 if ($options['login'] ?? true) {
-                    $this->get('login', 'Admin\Auth\LoginController@showLoginForm')->name('login');
-                    $this->post('login', 'Admin\Auth\LoginController@login');
+                    $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
+                    $this->post('login', 'Auth\LoginController@login');
                 }
 
                 // Logout Routes...
                 if ($options['logout'] ?? true) {
-                    $this->post('logout', 'Admin\Auth\LoginController@logout')->name('logout');
+                    $this->post('logout', 'Auth\LoginController@logout')->name('logout');
                 }
 
                 // Registration Routes...
                 if ($options['register'] ?? true) {
-                    $this->get('register', 'Admin\Auth\RegisterController@showRegistrationForm')->name('register');
-                    $this->post('register', 'Admin\Auth\RegisterController@register');
+                    $this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+                    $this->post('register', 'Auth\RegisterController@register');
                 }
 
                 // Password Reset Routes...
@@ -41,7 +41,7 @@ class AuthRouteMethods
 
                 // Password Confirmation Routes...
                 if ($options['confirm'] ??
-                    class_exists($this->prependGroupNamespace('Admin\Auth\ConfirmPasswordController'))) {
+                    class_exists($this->prependGroupNamespace('Auth\ConfirmPasswordController'))) {
                     $this->confirmPassword();
                 }
 

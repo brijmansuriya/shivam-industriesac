@@ -35,54 +35,44 @@
             <div id="navbar" class="navbar-collapse collapse navbar-right navigation-holder">
                 <button class="close-navbar"><i class="fa fa-close"></i></button>
                 <ul class="nav navbar-nav">
-                    <li class="menu-item-has-children">
-                        <a href="#">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="index.html">Home Style 1</a></li>
-                            <li><a href="index-2.html">Home Style 2</a></li>
-                            <li><a href="index-3.html">Home Style 3</a></li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Third level</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Level 3</a></li>
-                                    <li><a href="#">Level 3</a></li>
-                                    <li><a href="#">Level 3</a></li>
-                                </ul>
+                    <li><a href="{{url('/')}}">Home</a></li>
+                    <li><a href="{{url('aboutus')}}">About</a></li>
+                    <li><a href="{{url('aboutus')}}">Services</a></li>
+                    <li><a href="{{url('aboutus')}}">Contact</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <!-- Authentication Links -->
+                    @guest
+                        @if (Route::has('login'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
-                        </ul>
-                    </li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Services</a>
-                        <ul class="sub-menu">
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="service-single.html">Power and energy</a></li>
-                            <li><a href="oil-lubricant.html">Oil and lubricant</a></li>
-                            <li><a href="meterial-engineering.html">Meterial engineering</a></li>
-                            <li><a href="mechanical-engineering.html">Mechanical engineering</a></li>
-                            <li><a href="chemical-research.html">Chemical research</a></li>
-                            <li><a href="alternate-energy.html">Alternate energy</a></li>
-                            <li><a href="agricultural-processing.html">Agricultural processing</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Pages</a>
-                        <ul class="sub-menu">
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="project-sigle.html">Project single</a></li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="testimonials.html">Testimonials</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="blog-details.html">Blog single</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
+                        @endif
+
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            </li>
+                        @endif
+                    @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest
                 </ul>
             </div><!-- end of nav-collapse -->
             <div class="request-quote">
