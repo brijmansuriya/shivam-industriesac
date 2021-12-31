@@ -38,10 +38,10 @@
                     <li><a href="{{url('/')}}">Home</a></li>
                     <li><a href="{{url('aboutus')}}">About</a></li>
                     <li><a href="{{url('aboutus')}}">Services</a></li>
-                    <li><a href="{{url('aboutus')}}">Contact</a></li>
+                    <li><a href="{{url('contactus')}}">Contact</a></li>
                 </ul>
-                <ul class="navbar-nav ms-auto">
-                    <!-- Authentication Links -->
+                <!-- <ul class="navbar-nav ms-auto">
+                 
                     @guest
                         @if (Route::has('login'))
                             <li class="nav-item">
@@ -73,7 +73,7 @@
                             </div>
                         </li>
                     @endguest
-                </ul>
+                </ul> -->
             </div><!-- end of nav-collapse -->
             <div class="request-quote">
                 <a href="#">Request Quote</a>
