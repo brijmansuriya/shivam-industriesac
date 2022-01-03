@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Admin\VehicleModel;
 use Illuminate\Http\Request;
 use DB;
+
 class VehicleController extends Controller
 {
 

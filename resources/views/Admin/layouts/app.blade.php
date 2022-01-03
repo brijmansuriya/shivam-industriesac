@@ -76,6 +76,12 @@
                             <span class="sidebar-title">Bearing</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ URL('admin/product') }}">
+                            <span class="fa fa-cog"></span>
+                            <span class="sidebar-title">Product</span>
+                        </a>
+                    </li>
 
                 </ul>
             </div>

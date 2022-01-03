@@ -1,9 +1,7 @@
 <?php
 
 namespace App\Models;
-
 namespace App\Models\Admin;
-
 use DB;
 use Illuminate\Database\Eloquent\Model;
 
@@ -37,7 +35,6 @@ class VehicleModel extends Model
     }
     public function savedoc($Request)
     {
-     
         DB::table('tbl_vehicle')->insert([
             'cat_id' => $Request->cat_id,
             'vehicle_name' => $Request->vehicle_name,

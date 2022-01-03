@@ -634,7 +634,7 @@
         </div>
     </section>
     <!-- end testimonials-section-s2 -->
-
+   
 
     <!-- start cta-section -->
     <section class="cta-section">
@@ -735,6 +735,21 @@
             <div class="row">
                 <div class="col col-xs-12">
                     <div class="partners-slider">
+                        <div class="grid">
+                            <img src="{{asset('frontend/assets/images/partners/img-1.png')}}" alt>
+                        </div>
+                        <div class="grid">
+                            <img src="{{asset('frontend/assets/images/partners/img-2.png')}}" alt>
+                        </div>
+                        <div class="grid">
+                            <img src="{{asset('frontend/assets/images/partners/img-3.png')}}" alt>
+                        </div>
+                        <div class="grid">
+                            <img src="{{asset('frontend/assets/images/partners/img-4.png')}}" alt>
+                        </div>
+                        <div class="grid">
+                            <img src="{{asset('frontend/assets/images/partners/img-2.png')}}" alt>
+                        </div>
                         <div class="grid">
                             <img src="{{asset('frontend/assets/images/partners/img-1.png')}}" alt>
                         </div>

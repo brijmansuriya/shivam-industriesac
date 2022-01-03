@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\VehicleController;
 use App\Http\Controllers\Admin\BearingController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FrontController;
 /*
@@ -48,6 +49,15 @@ Route::group(['prefix' => 'admin/bearing'], function() {
     Route::post('/save', [BearingController::class, 'save']);
     Route::get('/delete/{id}', [BearingController::class, 'delete']);
 });
+
+Route::group(['prefix' => 'admin/product'], function() {
+    Route::get('/', [ProductController::class, 'index']);
+    Route::get('/add', [ProductController::class, 'add']);
+    Route::get('/add/{id}', [ProductController::class, 'add']);
+    Route::post('/save', [ProductController::class, 'save']);
+    Route::get('/delete/{id}', [ProductController::class, 'delete']);
+});
+
 Route::get('/aboutus', [FrontController::class, 'aboutus']);
 Route::get('/contactus', [FrontController::class, 'contactus']);
 Route::get('/service', [FrontController::class, 'service']);
