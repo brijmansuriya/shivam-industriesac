@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+
 namespace App\Models\Admin;
 
 use DB;
@@ -10,12 +11,13 @@ use Illuminate\Database\Eloquent\Model;
 class ProductModel extends Model
 {
     use HasFactory;
-    public $table='product';
+    public $table = 'product';
 
-    public function getalldata(){
+    public function getalldata()
+    {
         $alldata = DB::table('product as t1')->select('t1.*')
             ->where('t1.isdelete', 0)
-            ->orderBy('t1.id','DESC')
+            ->orderBy('t1.id', 'DESC')
             ->get();
         return $alldata;
     }
@@ -36,15 +38,15 @@ class ProductModel extends Model
 
         if ($Request->hasFile('img')) {
             $imageName = time() . '.' . $Request->img = $Request->img->extension();
-            $Request->file('img')->move(public_path('img'), $imageName);
+            $Request->file('img')->move(public_path('product_img'), $imageName);
         }
 
         DB::table('product')->insert([
             'product' => $Request->product,
             'img' => $imageName,
             'description' => $Request->description,
-            'created_by' => date('Y/m/d h:i:s'),
-            'updated_by' => date('Y/m/d h:i:s'),
+            'created_by' => date('Y/m/d'),
+            'updated_by' => date('Y/m/d'),
         ]);
         return true;
     }
@@ -53,19 +55,21 @@ class ProductModel extends Model
 
         $imageName = "";
         if ($Request->hasFile('img')) {
+
             $imageName = time() . '.' . $Request->img = $Request->img->extension();
-            $Request->file('img')->move(public_path('img'), $imageName);
+            $Request->file('img')->move(public_path('product_img'), $imageName);
             DB::table('product')->where('id', $Request->id)->update([
                 'img' => $imageName,
             ]);
+
         }
 
         DB::table('product')->where('id', $Request->id)->update([
             'product' => $Request->product,
             'description' => $Request->description,
-            'updated_by' => date('Y/m/d h:i:s'),
+
         ]);
         return true;
     }
-    
+
 }

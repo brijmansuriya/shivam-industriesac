@@ -735,36 +735,17 @@
             <div class="row">
                 <div class="col col-xs-12">
                     <div class="partners-slider">
+                        @foreach ($alldata as $item)
                         <div class="grid">
-                            <img src="{{asset('frontend/assets/images/partners/img-1.png')}}" alt>
+                            <div class="img-overlay">
+                                <img src="{{asset('product_img/'.$item->img)}}" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>{{$item->product}}</h3>
+                                <p>{{$item->description}}</p>
+                            </div>
                         </div>
-                        <div class="grid">
-                            <img src="{{asset('frontend/assets/images/partners/img-2.png')}}" alt>
-                        </div>
-                        <div class="grid">
-                            <img src="{{asset('frontend/assets/images/partners/img-3.png')}}" alt>
-                        </div>
-                        <div class="grid">
-                            <img src="{{asset('frontend/assets/images/partners/img-4.png')}}" alt>
-                        </div>
-                        <div class="grid">
-                            <img src="{{asset('frontend/assets/images/partners/img-2.png')}}" alt>
-                        </div>
-                        <div class="grid">
-                            <img src="{{asset('frontend/assets/images/partners/img-1.png')}}" alt>
-                        </div>
-                        <div class="grid">
-                            <img src="{{asset('frontend/assets/images/partners/img-2.png')}}" alt>
-                        </div>
-                        <div class="grid">
-                            <img src="{{asset('frontend/assets/images/partners/img-3.png')}}" alt>
-                        </div>
-                        <div class="grid">
-                            <img src="{{asset('frontend/assets/images/partners/img-4.png')}}" alt>
-                        </div>
-                        <div class="grid">
-                            <img src="{{asset('frontend/assets/images/partners/img-2.png')}}" alt>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div> <!-- end row -->

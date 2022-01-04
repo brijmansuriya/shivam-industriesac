@@ -15,9 +15,7 @@ class ProductController extends Controller
 
     public function index()
     {
-        
         $alldata = $this->ProductModel->getalldata();
-
         return view('Admin/product/index',compact('alldata'));
     }
 
@@ -33,7 +31,6 @@ class ProductController extends Controller
     }
     public function save(Request $Request)
     {
-        
         $Request->validate([
             'product' => 'required|unique:product,product,' . $Request->id,
             'img' => 'required|unique:product,img,' . $Request->id,
