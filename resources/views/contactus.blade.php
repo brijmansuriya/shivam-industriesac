@@ -68,9 +68,9 @@
                             <h3>Drop us a line</h3>
                             <p>For any kind of query, contact us with the details below.</p>
                             <ul>
-                                <li><i class="fa fa-phone"></i> +123 (569) 254 78</li>
-                                <li><i class="fa fa-envelope"></i> info-desk@clinkers.com</li>
-                                <li><i class="fa fa-home"></i> #59, East Madison Ave, Melbourne, Australia</li>
+                                <li><i class="fa fa-phone"></i> +91 9016241851</li>
+                                <li><i class="fa fa-envelope"></i> accuratebearing@gmail.com</li>
+                                <li><i class="fa fa-home"></i> Survey No.171/1,Plot No.39/B, B/H Shree Vallabh Forge NR. Santidham, SIDC Road end, Veraval-Shapar Rajkot</li>
                             </ul>
                         </div>
                     </div>
@@ -78,29 +78,5 @@
             </div> <!-- end container -->
         </section>
         <!-- end contact-pg-contact-section -->
-
-
-        <!-- start news-letter-section -->
-        <section class="news-letter-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-md-7">
-                        <h3>Subscribe your E-mail for our <span>Newsletter &amp; Business Tips</span></h3>
-                    </div>
-                    <div class="col col-md-5">
-                        <div class="newsletter-form">
-                            <form>
-                                <div>
-                                    <input type="text" class="form-control" placeholder="email address..">
-                                    <button type="submit">Subscribe</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end container -->
-        </section>
-        <!-- end news-letter-section -->
-
 
 @endsection
