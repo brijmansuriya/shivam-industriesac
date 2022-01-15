@@ -59,6 +59,8 @@ Route::group(['prefix' => 'admin/product'], function() {
 Route::get('/aboutus', [FrontController::class, 'aboutus']);
 Route::get('/contactus', [FrontController::class, 'contactus']);
 Route::get('/service', [FrontController::class, 'service']);
+Route::get('/product', [FrontController::class, 'product']);
+Route::get('/productpage/{id}', [FrontController::class, 'productpage']);
 
 Route::get('/clr', function () {
     $exitCode = Artisan::call('cache:clear');

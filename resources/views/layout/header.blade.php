@@ -38,6 +38,7 @@
                     <li><a href="{{url('/')}}">Home</a></li>
                     <li><a href="{{url('aboutus')}}">About</a></li>
                     <li><a href="{{url('aboutus')}}">Services</a></li>
+                    <li><a href="{{url('product')}}">Product</a></li>
                     <li><a href="{{url('contactus')}}">Contact</a></li>
                 </ul>
                 <!-- <ul class="navbar-nav ms-auto">
