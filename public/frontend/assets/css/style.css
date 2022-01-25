@@ -2371,7 +2371,7 @@ img {
 #0.5	footer
 --------------------------------------------------------------*/
 .site-footer {
-  background: #f0f0f0;
+  background: #0D1E2D;
   border-top: 1px solid #dcdcdc;
   /*** about widget ***/
   /*** services-widget ***/
@@ -2404,7 +2404,7 @@ img {
 .site-footer .upper-footer li,
 .site-footer .upper-footer p,
 .site-footer .upper-footer a {
-  color: #242c33;
+  color: #f0f0f0;
 }
 
 @media (max-width: 991px) {
@@ -2423,7 +2423,7 @@ img {
 .site-footer .widget .footer-logo {
   font-size: 24px;
   font-size: cacl-rem-value(24);
-  color: #242c33;
+  color: #f0f0f0;
   text-transform: uppercase;
   margin: 0 0 2em;
   position: relative;

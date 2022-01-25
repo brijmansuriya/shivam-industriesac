@@ -56,7 +56,7 @@
 <section class="about-section-s2">
     <div class="container">
         <div class="row">
-            <div class="col col-md-7">
+            <div class="col col-md-12">
                 <div class="about-text">
                     <div class="about-title">
                         <span>About Our Company</span>
@@ -66,20 +66,22 @@
                     <a href="#" class="theme-btn-s2">Read More</a>
                 </div>
             </div>
-            <div class="col col-md-5 about-video-col-wrap">
-                <div class="about-video-col">
-                    <div class="video-holder">
-                        <a href="https://www.youtube.com/embed/7e90gBu4pas?autoplay=1" class="video-btn" data-type="iframe">
-                            <i class="fa fa-play"></i> Play Video
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div> <!-- end row -->
     </div> <!-- end container -->
 </section>
 <!-- end about-section-s2 -->
-
+<section class="cta-section-s2">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="cta-text">
+                    <h3>We provide innovative Product Solutions for sustainable progress.</h3>
+                    <a href="{{ url('/contactus')}}" class="theme-btn-s2">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end container -->
+</section>
 
 <!-- start services-section-s2 -->
 <section class="services-section-s2 section-padding">
@@ -97,10 +99,10 @@
                 <div class="partners-slider">
                     @foreach ($alldata as $item)
                     <div class="grid">
-                        <div class="img-overlay">
-                            <img src="{{asset('product_img/'.$item->img)}}" alt="">
+                        <div class="img-overlay" style="width: 150px;height: 100px;">
+                            <img src="{{asset('product_img/'.$item->img)}}" alt="" style="width: 150px;height: 100px;">
                         </div>
-                        <div class="details">
+                        <div class="details" style="width: 150px;height: 100px;">
                             <h3>{{$item->product}}</h3>
                             <p>{{$item->description}}</p>
                         </div>
@@ -113,121 +115,13 @@
 </section>
 <!-- end services-section-s2 -->
 
-
-
-<!-- start team-section -->
-<section class="team-section section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1">
-                <div class="section-title">
-                    <h2>Our Team</h2>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col col-xs-12">
-                <div class="team-grids team-slider">
-                    <div class="grid">
-                        <div class="img-holder-social">
-                            <div class="img-holder">
-                                <img src="{{asset('frontend/assets/images/team/img-1.jpg')}}" alt="">
-                            </div>
-                            <div class="social">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <h4>Malcolm Marshall</h4>
-                            <span class="post">Co-Founder</span>
-                        </div>
-                    </div>
-                    <div class="grid">
-                        <div class="img-holder-social">
-                            <div class="img-holder">
-                                <img src="{{asset('frontend/assets/images/team/img-2.jpg')}}" alt="">
-                            </div>
-                            <div class="social">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <h4>Stephen King</h4>
-                            <span class="post">Co-Founder</span>
-                        </div>
-                    </div>
-                    <div class="grid">
-                        <div class="img-holder-social">
-                            <div class="img-holder">
-                                <img src="{{asset('frontend/assets/images/team/img-3.jpg')}}" alt="">
-                            </div>
-                            <div class="social">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <h4>Michelle Conroy </h4>
-                            <span class="post">Co-Founder</span>
-                        </div>
-                    </div>
-                    <div class="grid">
-                        <div class="img-holder-social">
-                            <div class="img-holder">
-                                <img src="{{asset('frontend/assets/images/team/img-1.jpg')}}" alt="">
-                            </div>
-                            <div class="social">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <h4>Frazer Diamond</h4>
-                            <span class="post">Co-Founder</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> <!-- end container -->
-</section>
-<!-- end team-section -->
-
 <!-- start cta-section -->
-<section class="cta-section-s2">
-    <div class="container">
-        <div class="row">
-            <div class="col col-xs-12">
-                <div class="cta-text">
-                    <h3>We provide innovative Product Solutions for sustainable progress.</h3>
-                    <a href="#" class="theme-btn-s2">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </div> <!-- end container -->
-</section>
+
 <!-- end cta-section -->
 
 <!-- start partners-section-s2 -->
 
 <!-- end partners-section-s2 -->
-
 
 <!-- end news-letter-section -->
 

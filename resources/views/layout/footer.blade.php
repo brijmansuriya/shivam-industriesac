@@ -20,9 +20,9 @@
                     <div class="widget services-widget">
                         <h3>Pages</h3>
                         <ul>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Home</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> About</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i> Contact</a></li>
+                            <li><a href="{{ url('/')}}"><i class="fa fa-angle-right"></i> Home</a></li>
+                            <li><a href="{{ url('/aboutus')}}"><i class="fa fa-angle-right"></i> About</a></li>
+                            <li><a href="{{ url('/contactus')}}"><i class="fa fa-angle-right"></i> Contact</a></li>
                         </ul>
                     </div>
                 </div>

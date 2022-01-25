@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1">
                 <div class="section-title">
-                    <h2>Industries Served</h2>
+                    <h2>Our Products</h2>
                     <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
             </div>
@@ -40,14 +40,15 @@
                     <div class="grid">
                           
                             <div class="img-overlay">
-                                <img src="{{asset('product_img/'.$item->img)}}" alt>
-                                <div class="overlay">
+                                <div style='width: 300px;height: 250px;'>
+                                <img src="{{asset('product_img/'.$item->img)}}" alt style='width: 300px;height: 250px;'>
+                                </div>
+                                <div class="overlay" style='width: 300px;height: 250px;'>
                                     <a href="#"><i class="fa fa-link"></i></a>
                                 </div>
                             </div>
                             <div class="details">
                                 <h3>{{$item->product}}</h3>
-                                <p>{{$item->description}}</p>
                                 <div class="read-more">
                                     <a href="{{url('productpage/'.$item->id)}}">Read More</a>
                                 </div>
@@ -69,7 +70,7 @@
             <div class="col col-xs-12">
                 <div class="cta-text">
                     <h3>We provide innovative Product Solutions for sustainable progress.</h3>
-                    <a href="#" class="theme-btn-s2">Contact Us</a>
+                    <a href="{{ url('contactus')}}" class="theme-btn-s2">Contact Us</a>
                 </div>
             </div>
         </div>

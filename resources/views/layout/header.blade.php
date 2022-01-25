@@ -37,7 +37,6 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{url('/')}}">Home</a></li>
                     <li><a href="{{url('aboutus')}}">About</a></li>
-                    <li><a href="{{url('aboutus')}}">Services</a></li>
                     <li><a href="{{url('product')}}">Product</a></li>
                     <li><a href="{{url('contactus')}}">Contact</a></li>
                 </ul>
@@ -77,7 +76,7 @@
                 </ul> -->
             </div><!-- end of nav-collapse -->
             <div class="request-quote">
-                <a href="#">Request Quote</a>
+                <a href="#">Catalog</a>
             </div>
         </div><!-- end of container -->
     </nav>

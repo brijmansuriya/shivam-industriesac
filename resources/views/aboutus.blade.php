@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col col-md-6">
                 <div class="about-img">
-                    <img src="assets/images/about-s3-pic.jpg" alt>
+                    <img src="{{ asset('frontend/assets/images/about-s3-pic.jpg')}}" alt>
                 </div>
             </div>
             <div class="col col-md-6">
@@ -39,7 +39,7 @@
                     </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inci didunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer citation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                     <div class="signature">
-                        <img src="assets/images/signature.png" alt>
+                        <img src="{{ asset('frontend/assets/images/signature.png')}}" alt>
                     </div>
                 </div>
 
@@ -47,7 +47,7 @@
                     <div class="fun-fact-grids start-count">
                         <div class="grid">
                             <div class="icon">
-                                <img src="assets/images/fun-fact/icon-1.png" alt>
+                                <img src="{{ asset('frontend/assets/images/fun-fact/icon-1.png')}}" alt>
                             </div>
                             <h3>
                                 <span class="counter" data-count="1200">00</span><span>+</span>
@@ -57,7 +57,7 @@
 
                         <div class="grid">
                             <div class="icon">
-                                <img src="assets/images/fun-fact/icon-2.png" alt>
+                                <img src="{{ asset('frontend/assets/images/fun-fact/icon-2.png')}}" alt>
                             </div>
                             <h3>
                                 <span class="counter" data-count="400">00</span><span>+</span>
@@ -67,7 +67,7 @@
 
                         <div class="grid">
                             <div class="icon">
-                                <img src="assets/images/fun-fact/icon-3.png" alt>
+                                <img src="{{ asset('frontend/assets/images/fun-fact/icon-3.png')}}" alt>
                             </div>
                             <h3>
                                 <span class="counter" data-count="1000">00</span><span>+</span>
